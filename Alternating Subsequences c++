@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+	int tc;
+	scanf("%d",&tc);
+	while (tc--) {
+		int n, num, O = 0, E = 0;
+		scanf("%d",&n);
+
+		for (int i=0;i<n;i++) {
+			scanf("%d",&num);
+			if (i & 1) E += num;
+			else O += num;
+		} printf("%d\n", max(E, O)); 
+	}
+
+	return 0;
+}
